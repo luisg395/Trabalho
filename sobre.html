@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Site Pessoal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Menu de navegação -->
+    <nav>
+        <a href="sobre.html">Sobre mim</a>
+        <a href="formacao.html">Formação</a>
+        <a href="portfolio.html">Portfólio</a>
+        <a href="#contato">Contato</a>
+    </nav>
+
+    <!-- Seção Sobre mim -->
+    <section id="sobre" class="sobre-container">
+        <img src="imagens.img/minha-foto.png" class="foto">
+
+        <div class="texto-sobre">
+            <h2>Sobre mim</h2>
+            <p>Olá! Meu nome é <strong>Luis Guilherme Pereira</strong> e sou estudante de <strong>Análise e Desenvolvimento de Sistemas</strong> 
+            pela <strong>Uninter</strong>. Sempre tive interesse por tecnologia, e hoje estou dedicando meus estudos ao desenvolvimento de software, 
+            buscando me aprofundar em linguagens de programação, estruturas de dados, bancos de dados e desenvolvimento web.</p>
+
+            <p>Atualmente, estou em busca de minha primeira oportunidade na área de tecnologia, com o objetivo de aplicar meus conhecimentos na prática, 
+            aprender com os profissionais da área e contribuir com soluções eficientes e criativas.</p>
+
+            <p>Nas horas vagas, pratico <strong>Natação</strong>, que me ajuda a relaxar.</p>
+        </div>
+    </section>
+    
+
+    <!-- Seção Contato -->
+    <section id="contato">
+        <h2>Contato</h2>
+        <form>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <!--Mantem o menu selecionado ao clicar-->
+    <script>
+        const links = document.querySelectorAll("nav a");
+        const currentPage = window.location.pathname;
+
+        links.forEach(link => {
+            const linkHref = link.getAttribute("href");
+            
+            if (currentPage.includes(linkHref)) {
+                link.classList.add("ativo");
+            }
+        });
+    </script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Menu de navegação -->
+    <nav>
+        <a href="sobre.html">Sobre mim</a>
+        <a href="formacao.html">Formação</a>
+        <a href="portfolio.html">Portfólio</a>
+        <a href="#contato">Contato</a>
+    </nav>
+
+    <!-- Seção Portfólio -->
+    <section id="portfolio" class="portfolio-container">
+        <img src="imagens.img/minha-foto.png" class="foto">
+            <div class="texto-portfolio">
+                <h2>Portfólio</h2>
+                <p>Aqui estão alguns dos meus projetos:</p>
+                <ul class="lista-projetos">
+                    <li><a href="https://luisg395.github.io/Projeto_09/" target="_blank" class="botao">Projeto 1</a></li>
+                    <li><a href="https://luisg395.github.io/Projeto_05/" target="_blank" class="botao">Projeto 2</a></li>
+                    <li><a href="https://luisg395.github.io/Projeto_03/" target="_blank" class="botao">Projeto 3</a></li>
+                </ul>
+            </div>
+    </section>
+
+    <!-- Seção Contato -->
+    <section id="contato">
+        <h2>Contato</h2>
+        <form>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <!--Mantem o menu selecionado ao clicar-->
+    <script>
+        const links = document.querySelectorAll("nav a");
+        const currentPage = window.location.pathname;
+
+        links.forEach(link => {
+            const linkHref = link.getAttribute("href");
+            
+            if (currentPage.includes(linkHref)) {
+                link.classList.add("ativo");
+            }
+        });
+    </script>
+
+</body>
+</html>
+

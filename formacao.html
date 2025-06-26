@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Menu de navegação -->
+    <nav>
+        <a href="sobre.html">Sobre mim</a>
+        <a href="formacao.html">Formação</a>
+        <a href="portfolio.html">Portfólio</a>
+        <a href="#contato">Contato</a>
+    </nav>
+
+    <!-- Seção Formação -->
+    <section id="formacao" class="formacao-container">
+        <img src="imagens.img/minha-foto.png" class="foto">
+        
+        <div class="texto-formacao">
+            <h2>Formação</h2>
+
+            <p>Atualmente sou estudante de <strong>Análise e Desenvolvimento de Sistemas</strong> na <strong>UNINTER</strong>, onde estou me 
+            aprofundando nas bases da tecnologia, como lógica de programação, algoritmos, estrutura de dados, banco de dados e 
+            desenvolvimento de software.</p>
+
+            <p>Além disso, conclui um curso de <strong>Desenvolvimento Front-End Completo</strong>, que ampliou muito minha visão 
+            prática e me preparou para atuar com criação de interfaces web modernas e responsivas.</p>
+
+            <p>Idiomas:</p>
+            <ul>
+                <li><strong>Português:</strong> Nativo</li>
+                <li><strong>Inglês:</strong> Básico</li>
+                <li><strong>Espanhol:</strong> Básico</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Seção Contato -->
+    <section id="contato">
+        <h2>Contato</h2>
+        <form>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <!--Mantem o menu selecionado ao clicar-->
+    <script>
+        const links = document.querySelectorAll("nav a");
+        const currentPage = window.location.pathname;
+
+        links.forEach(link => {
+            const linkHref = link.getAttribute("href");
+            
+            if (currentPage.includes(linkHref)) {
+                link.classList.add("ativo");
+            }
+        });
+    </script>
+
+
+</body>
+</html>
+
+
